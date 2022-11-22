@@ -11,6 +11,8 @@ private val retrofit= Retrofit.Builder()
     .baseUrl(constants.BASE_URL)
     .build()
 
+
+
 interface commWithCloud
 {
     @GET("photos") //Endpoint is photos ..Request is Get type
@@ -20,6 +22,7 @@ interface commWithCloud
 object MarsAPi
 {
     val retrofitService:commWithCloud by lazy {
+
         retrofit.create(commWithCloud::class.java)
 
     }
