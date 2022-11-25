@@ -26,8 +26,8 @@ class Viewmodel : ViewModel()
         viewModelScope.launch {
             try {
 
-                val thephotos=MarsAPi.retrofitService.getPhotos()
-                _status.value=thephotos
+              val   thePhotos=MarsAPi.retrofitService.getPhotos()
+                _status.value= "Success: ${thePhotos.size} Mars photos retrieved"
             }
             catch (e :Exception)
             {
